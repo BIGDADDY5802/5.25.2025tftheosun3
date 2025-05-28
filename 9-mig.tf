@@ -8,7 +8,7 @@ data "google_compute_zones" "available" {
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_instance_group_manager
 # Resource: Managed Instance Group
 resource "google_compute_region_instance_group_manager" "app01" {
-  depends_on         = [google_compute_router_nat.nat]
+  depends_on         = [google_compute_router_nat.iowanat]
   name               = "app01-mig"
   base_instance_name = "app01"
   #region = "" (optional if provider default is set)

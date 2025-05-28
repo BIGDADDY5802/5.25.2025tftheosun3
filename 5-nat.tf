@@ -1,8 +1,8 @@
 #5-nat.tf
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_router_nat
-resource "google_compute_router_nat" "nat" {
-  name   = "nat"
+resource "google_compute_router_nat" "iowanat" {
+  name   = "iowanat"
   router = google_compute_router.router.name
   region = "us-central1"
 
@@ -22,12 +22,12 @@ resource "google_compute_router_nat" "nat" {
 #     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
 #   }
 
-#   nat_ips = [google_compute_address.nat.self_link]
-# }
+#   nat_ips = [google_compute_address.iowanat.self_link]
+
 
 # # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_address
-# resource "google_compute_address" "nat" {
-#   name         = "nat"
+# resource "google_compute_address" "iowanat" {
+#   name         = "iowanat"
 #   address_type = "EXTERNAL"
 #   network_tier = "PREMIUM"
 #   region       = "us-central1"
