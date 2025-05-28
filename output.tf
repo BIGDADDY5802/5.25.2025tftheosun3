@@ -15,11 +15,11 @@ output "instance_external_ips" {
 }
 
 
-# # ALB Frontend Static IP
-# output "lb_static_ip_address" {
-#   description = "The static IP address of the load balancer."
-#   value       = "http://${google_compute_address.lb.address}"
-# }
+# ALB Frontend Static IP
+output "lb_static_ip_address" {
+  description = "The static IP address of the load balancer."
+  value       = "http://${google_compute_address.lb.address}"
+}
 
 # # https://developer.hashicorp.com/terraform/language/functions/join
 # output "compute_zones" {
